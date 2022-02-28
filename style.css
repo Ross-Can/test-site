@@ -1,0 +1,332 @@
+.splashscreen {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  animation: morph;
+  z-index: 9000;
+  animation-duration: 3s;
+  animation-fill-mode: fowards;
+
+}
+
+.splashscreen.display-none {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+ 
+  animation: fadeOut;
+  
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  z-index: -10;
+  transition: all 1s;
+}
+
+@keyframes morph{
+0%{
+  background-color: white;
+}
+
+75%{
+  background-color: #e9c156;
+}
+
+  100%{
+    background-color: black;
+  }
+}
+
+.animate{
+  opacity: 0;
+}
+
+
+.splashscreen img{
+  opacity: 0;
+  animation:fadeIn;
+  animation-duration:1s;
+  animation-delay: 2.5s; 
+  animation-fill-mode: forwards;
+  margin: auto;
+  width:25%
+}
+
+.splashscreen p{
+  margin: auto;
+  position: absolute;
+  color: black;
+  font-family: 'Courier New', monospace;
+  width: 75%;
+  word-wrap: none;
+  font-size: xx-large;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border: #e9c156;
+  border-width: thick;
+  font-size: xx-large;
+  width: 100%;
+}
+
+.section img {
+  width: 50%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width:100%;
+  padding: 10%;
+  gap: 10%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  height: 100px;
+  word-wrap: break-word;
+}
+
+.content button {
+  margin: auto;
+  padding: 10px;
+  background-color: #d8ba56;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  border:0;
+}
+
+hr {
+  background-color: #e9c156;
+  width: 30%;
+  height: 1px;
+}
+
+
+.video-section{
+  display: flex;
+  justify-content: center;
+  margin-right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e9c156;
+  border: 30px solid #e9c156;
+  border-width: thick;
+}
+
+
+.video-section picture{
+  width: 50%;
+  height: 100%;
+  border: 30px solid #e9c156;
+  border-width: thick;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel img{
+  height: 90vh;
+}
+
+
+.card-section{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 85%;
+  height:100%;
+  row-gap:100px;
+  margin:100px auto;
+}
+
+
+.ceo-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
+
+.ceo-card{
+  width: 100%;
+  height:50%;
+}
+
+.ceo-card .collage-card{ 
+  width: 50%;
+  font-size: large;
+}
+
+ .collage-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border: 30px solid #e9c156;
+  border-width: thick;
+
+}
+
+.ceo-card .collage-img{
+  width: 50%;
+}
+
+.collage-img{
+  width: 100%;
+}
+
+.template-section{
+  display: flex;
+}
+
+.template{
+  display: flex;
+}
+
+.collage-pkg{
+  width: 75%;
+  margin: auto;
+}
+
+
+
+
+/* Large devices (laptops/desktops, 992px and lower) */
+@media only screen and (max-width: 992px) {
+
+  .splashscreen img{
+  opacity: 0;
+  animation:fadeIn;
+  animation-duration:1s;
+  animation-delay: 2.5s; 
+  animation-fill-mode: forwards;
+  margin: auto;
+  width:50%
+}
+  section {
+    display: none;
+  }
+
+  .section {
+  font-size: large;
+}
+
+
+
+ 
+  .navbar-brand {
+    display: inline-block;
+    height: 100%;
+  }
+
+  .nav-seperator {
+    display: none;
+  }
+
+  .navbar-toggler {
+    color: #e9c156;
+    right: 0px;
+    font-size: xx-large;
+  }
+
+  .video-section{
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
+  .video-section picture{
+    width:100%;
+    height: 100%;
+  
+  }
+
+
+.carousel img{
+  height: 50vh;
+  
+}
+
+.card-section{
+  margin: 0px 0px;
+  padding: 0px;
+  gap: 0px;
+  width: 100%;
+}
+
+.collage-pkg{
+  width: 100%;
+  display: flex;
+}
+
+.collage-card{
+  border: none;
+  padding: 3%;
+}
+
+
+
+.section{
+  padding: 3%;
+}
+
+.content{
+  width: 100%;
+  padding: 10%;
+  gap: 10%;
+}
+
+.ceo-card{
+  flex-direction:column;
+}
+
+#card-2{
+  flex-direction:column-reverse;
+}
+
+.ceo-card .collage-img{
+  width: 100%;
+  margin: 0;
+}
+.collage-card{
+  margin: 0;
+}
+
+.ceo-card .collage-card{ 
+  width: 100%;
+}
+
+footer{
+  
+  background-color: rgb(22, 22, 22);
+}
+
+}
